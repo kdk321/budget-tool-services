@@ -21,7 +21,15 @@ public class BudgetItem {
     }
 
     public BudgetItem(int id, boolean paid, Date dateDue, String item, double amount, boolean reviewed){
+        this.id = id;
+        this.paid = paid;
+        this.dateDue = dateDue;
+        this.item = item;
+        this.amount = amount;
+        this.reviewed = reviewed;
     }
+
+
 
     public int getId() {
         return id;
