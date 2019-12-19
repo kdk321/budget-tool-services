@@ -17,20 +17,20 @@ public class BudgetToolServicesApplication {
 		SpringApplication.run(BudgetToolServicesApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner init(BudgetRepository budgetRepository) {
-		return args -> {
-			Stream.of("John").forEach(name -> {
-				BudgetItem budgetItem = new BudgetItem(1, true, new Date(), "Paycheck", 500.00, true);
-				budgetRepository.save(budgetItem);
-
-				budgetItem = new BudgetItem(2, false, new Date(), "Gas", -25.00, true);
-				budgetRepository.save(budgetItem);
-
-				budgetItem = new BudgetItem(3, false, new Date(), "Electric", -100.00, true);
-				budgetRepository.save(budgetItem);
-			});
-			budgetRepository.findAll().forEach(System.out::println);
-		};
-	}
+//	@Bean
+//	CommandLineRunner init(BudgetRepository budgetRepository) {
+//		return args -> {
+//			Stream.of("John").forEach(name -> {
+//				BudgetItem budgetItem = new BudgetItem(1, true, new Date(), "Paycheck", 500.00, true);
+//				budgetRepository.save(budgetItem);
+//
+//				budgetItem = new BudgetItem(2, false, new Date(), "Gas", -25.00, true);
+//				budgetRepository.save(budgetItem);
+//
+//				budgetItem = new BudgetItem(3, false, new Date(), "Electric", -100.00, true);
+//				budgetRepository.save(budgetItem);
+//			});
+//			budgetRepository.findAll().forEach(System.out::println);
+//		};
+//	}
 }
