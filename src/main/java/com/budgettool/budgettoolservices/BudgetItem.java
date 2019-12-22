@@ -10,7 +10,7 @@ import java.util.Date;
 public class BudgetItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Long id;
     boolean paid;
     Date dateDue = new Date();
     String item;
@@ -20,7 +20,7 @@ public class BudgetItem {
     public BudgetItem() {
     }
 
-    public BudgetItem(int id, boolean paid, Date dateDue, String item, double amount, boolean reviewed){
+    public BudgetItem(Long id, boolean paid, Date dateDue, String item, double amount, boolean reviewed){
         this.id = id;
         this.paid = paid;
         this.dateDue = dateDue;
@@ -31,7 +31,7 @@ public class BudgetItem {
 
 
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
