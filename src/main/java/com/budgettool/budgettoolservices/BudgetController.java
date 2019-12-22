@@ -19,7 +19,7 @@ public class BudgetController {
     }
 
     @PostMapping("/budget-items")
-    public void addUser(@RequestBody BudgetItem budgetItem){
+    public void saveBudgetItem(@RequestBody BudgetItem budgetItem){
         budgetRepository.save((budgetItem));
     }
 }

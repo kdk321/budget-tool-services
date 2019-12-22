@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity
 public class BudgetItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     boolean paid;
     Date dateDue = new Date();
