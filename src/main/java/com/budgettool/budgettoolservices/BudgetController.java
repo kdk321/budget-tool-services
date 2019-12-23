@@ -1,5 +1,6 @@
 package com.budgettool.budgettoolservices;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class BudgetController {
 
     @GetMapping("/budget-items")
     public List<BudgetItem> getBudgetItems(){
-            return (List<BudgetItem>) budgetRepository.findAll();
+            return (List<BudgetItem>) budgetRepository.findAll(Sort.by(Sort.Order.asc("dateDue"), Sort.Order.desc("amount")));
     }
 
     @GetMapping("/budget-items/{id}")
