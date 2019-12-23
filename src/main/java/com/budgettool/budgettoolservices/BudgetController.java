@@ -19,7 +19,7 @@ public class BudgetController {
 
     @GetMapping("/budget-items")
     public List<BudgetItem> getBudgetItems(){
-            return (List<BudgetItem>) budgetRepository.findAll(Sort.by(Sort.Order.asc("dateDue"), Sort.Order.desc("amount")));
+        return budgetRepository.findAll(Sort.by(Sort.Order.asc("dateDue"), Sort.Order.desc("amount")));
     }
 
     @GetMapping("/budget-items/{id}")
